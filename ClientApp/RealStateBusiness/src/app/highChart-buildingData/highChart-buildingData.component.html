@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <label>Building</label>
+      <select name="building" [(ngModel)]="selectedBuilding" class="form-control">
+        <option value="">Select Building</option>
+        <option *ngFor="let obj of buildings" [value]="obj.id">{{ obj.name }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <label>Object</label>
+      <select name="object" [(ngModel)]="selectedObject" class="form-control">
+        <option value="">Select Object</option>
+        <option *ngFor="let obj of objects" [value]="obj.id">{{ obj.name }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <label>DataField</label>
+      
+      <select name="datafield" [(ngModel)]="selectedDataField" class="form-control">
+        <option value="">Select DataField</option>
+        <option *ngFor="let obj of dataFields" [value]="obj.id">{{ obj.name }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <label>Date Range</label>
+      <div class="input-group">
+        <input type="datetime-local" name="startDate" [(ngModel)]="selectedStartDate" class="form-control">
+        <div class="input-group-prepend">
+          <span class="input-group-text">to</span>
+        </div>
+        <input type="datetime-local" name="endDate" [(ngModel)]="selectedEndDate" class="form-control">
+      </div>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <button type="button" class="btn btn-outline-primary mt-3" (click)="btnsearch()">Search</button>
+    </div>
+  </div>
+  <!-- Loading GIF -->
+  <div *ngIf="isLoading" class="text-center">
+    <img src="../../assets/Loading.gif" alt="Loading..." />
+  </div>
+</div>
+
+
+
+<highcharts-chart *ngIf="chartOptions" [Highcharts]="highcharts" [options]="chartOptions"
+  style="height: 100%; width: 100%; display: block; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+
+</highcharts-chart>

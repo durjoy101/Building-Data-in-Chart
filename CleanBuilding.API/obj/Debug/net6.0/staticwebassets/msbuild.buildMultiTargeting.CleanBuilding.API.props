@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CleanBuilding.API.props" />
+</Project>

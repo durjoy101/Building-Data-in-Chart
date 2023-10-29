@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PwWExFr5T8Z1oWhvJ0izBEy/IqSpCeC4Eex6KL+izYKOdXd3nM6/rlV1jTBVBJhnEACVr+Ub5yXznGX5FpuNuQ==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\S3_innovative\\CleanBuilding.Application\\CleanBuilding.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\durjo\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512"
+  ],
+  "logs": []
+}
