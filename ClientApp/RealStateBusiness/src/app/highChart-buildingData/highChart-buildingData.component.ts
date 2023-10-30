@@ -41,7 +41,6 @@ export class HighChartBuildingDataComponent implements OnInit {
   }
 
   lineChart(){
-    debugger;
 
     this.chartOptions = {
       chart: {
@@ -84,7 +83,6 @@ export class HighChartBuildingDataComponent implements OnInit {
 
 
   btnsearch() {
-    debugger
     this.isLoading = true;
 
     const buildingId: number | undefined = this.selectedBuilding ? +this.selectedBuilding : undefined;
@@ -103,7 +101,6 @@ export class HighChartBuildingDataComponent implements OnInit {
       : defaultEndDate;
 
     this.buildingDataService.btnsearch(this.selectedBuilding!,this.selectedObject!,this.selectedDataField!,startDate,endDate).subscribe((data) => {
-      console.log(data); 
 
       this.readingData = data;
 
